@@ -13,8 +13,8 @@
 #define LED_ON_EM3_OFFSET 0 //Needs to be adjusted according to ULFRCO frequency
 
 #define LED_ON_SECS 	0.004 //On time in seconds
-#define LED_OFF_SECS 	4.996 //Off time in seconds
-#define LED_TOTAL_SECS 	4 //Total time in seconds
+#define LED_OFF_SECS 	6.246 //Off time in seconds
+#define LED_TOTAL_SECS 	6.25  //Total time in seconds
 
 #define LED_pin_port 		gpioPortE //LED GPIO port
 #define LED0_pin_number 	2 //LED0 pin number
@@ -32,12 +32,12 @@
 #define ACMP_Darkness_threshold 	2 //ACMP value for Darkness threshold
 #define ACMP_Light_threshold 		61 //ACMP value for Light threshold
 
-#define ADC_FREQ 				975000 //ADC Frequency calculated for 10000 samples
+#define ADC_FREQ 				1300000 //ADC Frequency calculated for 10000 samples
 #define ADC_resolution 			adcRes12Bit //12 bit resolution for ADC conversion
 #define ADC_input_channel 		adcSingleInpTemp //Internal Temperature sensor channel for ADC
 #define ADC_ref 				adcRef1V25 //ADC reference
 #define ADC_acquisition_time 	adcAcqTime1 //ADC acquisition time
-#define ADC_sample_count 		400 //Total number of samples for conversion
+#define ADC_sample_count 		500 //Total number of samples for conversion
 
 #define Temperature_Upper_Limit 35
 #define Temperature_Lower_Limit 15
