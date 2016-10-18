@@ -32,6 +32,7 @@
 #include "em_adc.h"
 #include "em_dma.h"
 #include "em_i2c.h"
+#include "em_leuart.h"
 #include "dmactrl.h"
 
 #include "sleep.h"
@@ -46,6 +47,7 @@
 #include "dma.h"
 #include "i2c.h"
 #include "tsl2651.h"
+#include "leuart.h"
 
 /**************************************************************************//**
  * @brief  Main function
@@ -74,6 +76,8 @@ int main(void)
 		err_code = adc_init_fn();
 		err_code = dma_init_fn();
 		err_code = LETimer0_Init(ENERGY_MODE);
+		err_code = leuart_init_fn();
+		leuart_tx_data(0x77);
 	}
 	else
 	{

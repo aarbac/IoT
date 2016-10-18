@@ -43,6 +43,17 @@ unsigned int GPIO_Init(sleepstatemode_enum EMx)
 	GPIO_DriveModeSet(LED_pin_port, gpioDriveModeLowest);
 	GPIO_DriveModeSet(Light_Excite_port, gpioDriveModeLowest);
 
+
+	GPIO_PinModeSet(gpioPortD,                /* GPIO port */
+	                4,                        /* GPIO port number */
+	                gpioModePushPull,         /* Pin mode is set to push pull */
+	                1);                       /* High idle state */
+
+	GPIO_PinModeSet(gpioPortD,                /* GPIO port */
+	                5,                        /* GPIO port number */
+	                gpioModePushPull,         /* Pin mode is set to push pull */
+	                1);                       /* High idle state */
+
 	return SILABS_SUCCESS;
 }
 
