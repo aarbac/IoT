@@ -75,9 +75,8 @@ int main(void)
 		err_code = i2c_init_fn();
 		err_code = adc_init_fn();
 		err_code = dma_init_fn();
-		err_code = LETimer0_Init(ENERGY_MODE);
 		err_code = leuart_init_fn();
-		leuart_tx_data(0x77);
+		err_code = LETimer0_Init(ENERGY_MODE);
 	}
 	else
 	{

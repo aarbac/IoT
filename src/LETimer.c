@@ -8,6 +8,7 @@
 #include "dma.h"
 #include "i2c.h"
 #include "tsl2651.h"
+#include "leuart.h"
 
 #include "em_cmu.h"
 #include "em_gpio.h"
@@ -19,6 +20,7 @@
 #include "em_adc.h"
 #include "em_dma.h"
 #include "em_i2c.h"
+#include "em_leuart.h"
 
 unsigned int ACMP_Out_flag;
 unsigned int adc_count = 0;
@@ -305,6 +307,7 @@ void DMAtransferComplete(unsigned int channel, bool primary, void *user)
 	{
 		GPIO_on_off(1, LED_pin_port, LED1_pin_number);
 	}
+	leuart_tx_data((uint8_t)temp_ret);
 }
 
 /*******

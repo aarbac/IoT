@@ -42,7 +42,7 @@
 #define Temperature_Upper_Limit 35
 #define Temperature_Lower_Limit 15
 
-#define DMA_ON
+//#define DMA_ON
 #define DMA_ADC_CHANNEL 0
 #define DMA_Dest_inc 	dmaDataInc2 	//DMA Destination Increment size
 #define DMA_Src_inc 	dmaDataIncNone 	//DMA Source Increment size
@@ -64,7 +64,7 @@
 #define I2C_Power_pin		0			//Power GPIO pin
 #define I2C_Interrupt_pin	1			//Interrupt GPIO pin
 
-//#define USE_POLLING //Used for polling the ADC and not use the IRQ Handler
+#define USE_POLLING //Used for polling the ADC and not use the IRQ Handler
 //#define READ_SENSOR_ADC_BUFFERS
 
 #endif
